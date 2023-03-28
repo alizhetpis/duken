@@ -53,10 +53,3 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });
-
-const Category = require('./models/category');
-
-app.get('/api/categories', async (req, res) => {
-  const categories = await Category.find({});
-  res.send(categories);
-});
